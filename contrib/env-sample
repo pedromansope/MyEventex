@@ -1,0 +1,10 @@
+SECRET_KEY=THIS_IS_NOT_A_GOOD_SECRET
+DEBUG=True
+ALLOWED_HOSTS=127.0.0.1, .localhost, .herokuapp.com
+
+EMAIL_HOST_USER=EMAIL_DEFALUT
+EMAIL_HOST_PASSWORD=Your_Pass
+EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+EMAIL_HOST=smtp.gmail.com
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
