@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render, resolve_url as r
 from django.template.loader import render_to_string
 from subscriptions.forms import SubscriptionForm
-from django.contrib import messages
 from subscriptions.models import Subscription
 
 
