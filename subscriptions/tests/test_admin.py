@@ -10,6 +10,7 @@ class SubscriptionModelAdminTest(TestCase):
                                     email='pedrolucasmppe@gmail.com', phone='81997445878')
 
         self.model_admin = SubscriptionModelAdmin(Subscription, admin.site)
+
     def test_has_action(self):
         """Marcar como pago"""
         self.assertIn('mark_as_paid', self.model_admin.actions)
