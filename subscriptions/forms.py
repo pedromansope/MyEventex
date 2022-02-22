@@ -9,8 +9,18 @@ def validar_cpf(value):
     if len(value) != 11:
         raise ValidationError('CPF deve conter exatamente 11 números', 'tamanho')
 
+
 class SubscriptionForm(forms.Form):
     name = forms.CharField(label='Nome')
     cpf = forms.CharField(label='CPF', validators=[validar_cpf])
     email = forms.EmailField(label='E-mail')
     phone = forms.CharField(label='Telefone')
+
+    def clean_name(self):
+        name = self.cleaned_data['name']
+
+        palavras = []
+        for p in name.split():
+            palavras.append(p.capitalize())
+
+        return ' '.join(palavras)
